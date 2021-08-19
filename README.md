@@ -5,7 +5,9 @@ This repository provides dataset and additional materials of the paper: "[Data-D
 
 The dataset was prepared for the five basic emotions (joy, sadness, anger, fear, and surprise) using a crowdsourcing platform and a home-grown procedure for collecting and controlling annotators markup.
 
-Version 0.0.1 (paper version)
+Version 0.1.1 (actual version)
+
+coming soon
 
 Data
 ---
@@ -23,14 +25,7 @@ The number of labels by data source is presented in Table 1.
 
 #### Table #1. The number of emotion labels in different subsets of our dataset.
 
-| Data source | Joy |Sadness| Fear |Anger|Surprise|No emotions|Total sentences|
-| ----------- | --- | ----- | ---- | --- | ------ | --------- | ------------- |
-| Twitter     | 1233| 1372  | 362  | 198 |  221   |   129     |     3430      |
-| Lenta.ru    | 190 | 92    | 126  | 121 |  195   |   2411    |     3131      |
-| LiveJournal | 433 | 298   | 264  | 231 |  398   |   1519    |     3107      |
-| ----------- | --- | ----- | ---- | --- | ------ | --------- | ------------- |
-| Total       | 1856| 1762  | 752  | 550 |  814   |   4059    |     9668      |
-| ----------- | --- | ----- | ---- | --- | ------ | --------- | ------------- |
+coming soon
 
 Annotation procedure
 ---
@@ -44,16 +39,6 @@ Sentences which the annotators believed to express no author’s emotion were to
 Sentences were split into tasks and assigned to annotators so that each sentence was annotated at least three times.
 
 The final label for the sentence was "No emotion" if less than 60% annotators put any emotion labels on it (regard less of their types). A label of a specific emotion was assigned to a sentence if put by more than half of the annotators (except those who put "No emotion").
-
-Data Fields
----
-Each instance is a text sentence in Russian from several sources with one or more emotion annotations (or no emotion at all), which includes the following fields:
-- text: the text of the sentence;
-- labels: the emotion annotations;
-- source: the tag name of the corresponding source
-- sentences: text tokenized and lemmatized with [udpipe](https://ufal.mff.cuni.cz/udpipe)
-  - 'forma': the original word form;
-  - 'lemma': the lemma of this word
 
 Baselines
 ---
@@ -70,17 +55,12 @@ The F1-scores of the selected classifiers in comparison with the results of the 
 
 #### Table #2. The F1-micro (mic.) and F1-macro (mac.) of detecting different emotions.
 
-| Model       |   Joy   | Sadness |   Fear  |  Anger  | Surprise|  Mean   |
-|             |mic.|mac.|mic.|mac.|mic.|mac.|mic.|mac.|mic.|mac.|mic.|mac.|
-| ----------- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| Random      |0.5 |0.45|0.52|0.45|0.51|0.39|0.5 |0.38|0.5 |0.4 |0.51|0.41|
-| SVM (TF-IDF)|0.87|0.71|0.88|0.72|0.94|0.68|0.95|0.53|0.93|0.69|0.91|0.66|
-| Lexicon     |0.76|0.65|0.7 |0.59|0.79|0.65|0.76|0.62|0.79|0.64|0.76|0.63|
-| Our ensemble|0.93|0.88|0.91|0.83|0.95|0.75|0.92|0.66|0.93|0.77|0.93|0.78|
+coming soon
 
 Requirements
 ---
 - Python 3.7+
+- datasets 1.11.0
 - scikit-learn==0.22.1
 - tpot==0.11.1
 - xgboost==0.90
