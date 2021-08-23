@@ -9,7 +9,7 @@ The data is in Russian.
 
 Version 0.1.1 (actual version)
 
-In this version of the dataset (the previous one is described in the article, branch ```v_0.0.1_(paper)```) an inaccuracy with the presence of similar sentences was corrected. The texts of sentences that completely (or almost completely) repeated each other were removed. In addition, some new examples were added, but the total number of examples was reduced from 9668 to 9410.
+In this version of the dataset (the previous one is described in the article, branch `v_0.0.1_(paper)`) an inaccuracy with the presence of similar sentences was corrected. The texts of sentences that completely (or almost completely) repeated each other were removed. In addition, some new examples were added, but the total number of examples was reduced from 9668 to 9410.
 
 This dataset was published on [hugging face](https://huggingface.co/datasets/sagteam/cedr) and is available for use as:
 
@@ -91,19 +91,13 @@ While evaluating the proposed solution, we compare it against several basic esti
 3. Lexicon: The classifier based on dictionaries of emotive vocabulary. The emotion label is determined by thepresence of words from the emotive vocabulary for the corresponding emotion.
 4. Our ensembel: A set of classification models and encoding a sentence with the pretrained [ELMo model](docs.deeppavlov.ai/en/master/features/pretrainedvectors.html#elmo). Models was performed with an AutoML method based on [the TPOT library](http://epistasislab.github.io/tpot/).  
 
-Calculation of baselines is presented in the jupyter notebook ```./notebooks/Baseline_accuracy.ipynb``` Before running the notebook, you need to download the data and place them in a folder ```./data/```.
+Calculation of baselines is presented in the jupyter notebook `./notebooks/Baseline_accuracy.ipynb` Before running the notebook, you need to download the data and place them in a folder `./data/`.
 
 The F1-scores of the selected classifiers in comparison with the results of the baseline methods are presented in Table2.
 
 #### Table #2. The F1-micro (mic.) and F1-macro (mac.) of detecting different emotions.
 
-| Model       |   Joy   | Sadness |   Fear  |  Anger  | Surprise|  Mean   |
-|             |mic.|mac.|mic.|mac.|mic.|mac.|mic.|mac.|mic.|mac.|mic.|mac.|
-| ----------- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| Random      |0.49|0.44|0.49|0.44|0.49|0.39|0.5 |0.39|0.51|0.41|0.5 |0.41|
-| SVM (TF-IDF)|0.86|0.67|0.86|0.71|0.94|0.66|0.93|0.5 |0.93|0.67|0.9 |0.64|
-| Lexicon     |0.83|0.73|0.71|0.62|0.83|0.68|0.76|0.57|0.88|0.76|0.8 |0.67|
-| Our ensemble|0.92|0.87|0.92|0.86|0.93|0.73|0.9 |0.62|0.93|0.76|0.92|0.77|
+<table><thead><tr><th rowspan="2">Model</th><th colspan="2">Joy</th><th colspan="2">Sadness</th><th colspan="2">Fear</th><th colspan="2">Anger</th><th colspan="2">Surprise</th><th colspan="2">Mean</th></tr><tr><th>mic.</th><th>mac.</th><th>mic.</th><th>mac.</th><th>mic.</th><th>mac.</th><th>mic.</th><th>mac.</th><th>mic.</th><th>mac.</th><th>mic.</th><th>mac.</th></tr></thead><tbody><tr><td>Random</td><td>0.49</td><td>0.44</td><td>0.49</td><td>0.44</td><td>0.49</td><td>0.39</td><td>0.5 </td><td>0.39</td><td>0.51</td><td>0.41</td><td>0.5 </td><td>0.41</td></tr><tr><td>SVM (TF-IDF)</td><td>0.86</td><td>0.67</td><td>0.86</td><td>0.71</td><td>0.94</td><td>0.66</td><td>0.93</td><td>0.5 </td><td>0.93</td><td>0.67</td><td>0.9 </td><td>0.64</td></tr><tr><td>Lexicon</td><td>0.83</td><td>0.73</td><td>0.71</td><td>0.62</td><td>0.83</td><td>0.68</td><td>0.76</td><td>0.57</td><td>0.88</td><td>0.76</td><td>0.8 </td><td>0.67</td></tr><tr><td>Our ensemble</td><td>0.92</td><td>0.87</td><td>0.92</td><td>0.86</td><td>0.93</td><td>0.73</td><td>0.9 </td><td>0.62</td><td>0.93</td><td>0.76</td><td>0.92</td><td>0.77</td></tr></tbody></table>
 
 Requirements
 ---
