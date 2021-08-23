@@ -7,7 +7,16 @@ The dataset was prepared for the five basic emotions (joy, sadness, anger, fear,
 
 Version 0.1.1 (actual version)
 
-coming soon
+Эта версия датасета отличается от предыдущего (который описан в статье, ветка v_0.0.1_(paper)) тем, что здесь была исправлена неточность с похожими предложениями. Были убраны тексты предложений, которые полностью (или почти полностью) повторяли друг друга. Кроме этого было доразмечено ещё немного новых примеров, однако общее число примеров сократилось с 9668 до 9410.
+
+Данный набор данных был опубликован на [hugging face](https://huggingface.co/datasets/sagteam/cedr) и доступен для использования как:
+
+```
+from datasets import load_dataset
+
+train_df = load_dataset('sagteam/cedr', name='enriched', split='train')
+test_df = load_dataset('sagteam/cedr', name='enriched', split='test')
+```
 
 Data
 ---
@@ -15,17 +24,23 @@ The data is in Russian.
 
 Data was collected from several sources: posts of the Live Journal social network, texts of the online news agency Lenta.ru, and Twitter microblog posts.
 
-In total, 3107 sentences were selected from LiveJournal posts, 3131 sentences from Lenta.Ru, and 3430 sentencesfrom Twitter. After selection, sentences were offered to annotators for labeling.
+In total, 3069 sentences were selected from LiveJournal posts, 2851 sentences from Lenta.Ru, and 3490 sentencesfrom Twitter. After selection, sentences were offered to annotators for labeling.
 
 The dataset includes a set of train/test splits, with 7528, and 1882 examples respectively.
 
-The dataset are uploaded to our cloud storage and are available [here](https://cloud.mail.ru/public/f89f/W4o4PtU9U).
+The dataset доступен загрузкой через Hugging Face.
 
 The number of labels by data source is presented in Table 1.
 
-#### Table #1. The number of emotion labels in different subsets of our dataset.
+#### Table #1. The number of emotion labels in different subsets of our dataset. В скобочках указана разница относительно версии корпуса из статьи (v_0.0.1_(paper)).
 
-coming soon
+| Data source |   Joy    | Sadness  |  Fear   | Anger   |Surprise |No emotions|Total sentences|
+| ----------- | -------- | -------- | ------- | ------- | ------- | --------- | ------------- |
+| Twitter     |1306 (+73)|1409 (+37)|351 (-11)|195 (-3) |197 (-24)| 121 (-8)  |  3490 (+60)   |
+| Lenta.ru    | 185 (-5) |  89 (-3) |115 (-11)|112 (-9) |190 (-5) |2164 (-247)|  2851 (-280)  |
+| LiveJournal | 431 (-2) | 298 (0)  |264 (0)  |229 (-2) |390 (-8) |1492 (-27) |  3069 (-38)   |
+| ----------- | -------- | -------- | ------- | ------- | ------- | --------- | ------------- |
+| Total       |1922 (+66)|1796 (+34)|730 (-22)|536 (-14)|777 (-37)|3777 (-282)|  9410 (-258)  |
 
 Annotation procedure
 ---
@@ -55,12 +70,18 @@ The F1-scores of the selected classifiers in comparison with the results of the 
 
 #### Table #2. The F1-micro (mic.) and F1-macro (mac.) of detecting different emotions.
 
-coming soon
+| Model       |   Joy   | Sadness |   Fear  |  Anger  | Surprise|  Mean   |
+|             |mic.|mac.|mic.|mac.|mic.|mac.|mic.|mac.|mic.|mac.|mic.|mac.|
+| ----------- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| Random      |0.49|0.44|0.49|0.44|0.49|0.39|0.5 |0.39|0.51|0.41|0.5 |0.41|
+| SVM (TF-IDF)|0.86|0.67|0.86|0.71|0.94|0.66|0.93|0.5 |0.93|0.67|0.9 |0.64|
+| Lexicon     |0.83|0.73|0.71|0.62|0.83|0.68|0.76|0.57|0.88|0.76|0.8 |0.67|
+| Our ensemble|0.92|0.87|0.92|0.86|0.93|0.73|0.9 |0.62|0.93|0.76|0.92|0.77|
 
 Requirements
 ---
 - Python 3.7+
-- datasets 1.11.0
+- datasets==1.11.0
 - scikit-learn==0.22.1
 - tpot==0.11.1
 - xgboost==0.90
