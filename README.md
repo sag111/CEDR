@@ -28,8 +28,6 @@ In total, 3069 sentences were selected from LiveJournal posts, 2851 sentences fr
 
 The dataset includes a set of train/test splits, with 7528, and 1882 examples respectively.
 
-The dataset доступен загрузкой через Hugging Face.
-
 The number of labels by data source is presented in Table 1.
 
 #### Table #1. The number of emotion labels in different subsets of our dataset. The difference from the previous version of the dataset (v_0.0.1_(paper)) is shown in parentheses.
