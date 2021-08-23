@@ -28,9 +28,7 @@ The number of labels by data source is presented in Table 1.
 | Twitter     | 1233| 1372  | 362  | 198 |  221   |   129     |     3430      |
 | Lenta.ru    | 190 | 92    | 126  | 121 |  195   |   2411    |     3131      |
 | LiveJournal | 433 | 298   | 264  | 231 |  398   |   1519    |     3107      |
-| ----------- | --- | ----- | ---- | --- | ------ | --------- | ------------- |
 | Total       | 1856| 1762  | 752  | 550 |  814   |   4059    |     9668      |
-| ----------- | --- | ----- | ---- | --- | ------ | --------- | ------------- |
 
 Annotation procedure
 ---
@@ -70,13 +68,7 @@ The F1-scores of the selected classifiers in comparison with the results of the 
 
 #### Table #2. The F1-micro (mic.) and F1-macro (mac.) of detecting different emotions.
 
-| Model       |   Joy   | Sadness |   Fear  |  Anger  | Surprise|  Mean   |
-|             |mic.|mac.|mic.|mac.|mic.|mac.|mic.|mac.|mic.|mac.|mic.|mac.|
-| ----------- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| Random      |0.5 |0.45|0.52|0.45|0.51|0.39|0.5 |0.38|0.5 |0.4 |0.51|0.41|
-| SVM (TF-IDF)|0.87|0.71|0.88|0.72|0.94|0.68|0.95|0.53|0.93|0.69|0.91|0.66|
-| Lexicon     |0.76|0.65|0.7 |0.59|0.79|0.65|0.76|0.62|0.79|0.64|0.76|0.63|
-| Our ensemble|0.93|0.88|0.91|0.83|0.95|0.75|0.92|0.66|0.93|0.77|0.93|0.78|
+<table><thead><tr><th rowspan="2">Model</th><th colspan="2">Joy</th><th colspan="2">Sadness</th><th colspan="2">Fear</th><th colspan="2">Anger</th><th colspan="2">Surprise</th><th colspan="2">Mean</th></tr><tr><th>mic.</th><th>mac.</th><th>mic.</th><th>mac.</th><th>mic.</th><th>mac.</th><th>mic.</th><th>mac.</th><th>mic.</th><th>mac.</th><th>mic.</th><th>mac.</th></tr></thead><tbody><tr><td>Random</td><td>0.5 </td><td>0.45</td><td>0.52</td><td>0.45</td><td>0.51</td><td>0.39</td><td>0.5 </td><td>0.38</td><td>0.5 </td><td>0.4 </td><td>0.51</td><td>0.41</td></tr><tr><td>SVM (TF-IDF)</td><td>0.87</td><td>0.71</td><td>0.88</td><td>0.72</td><td>0.94</td><td>0.68</td><td>0.95</td><td>0.53</td><td>0.93</td><td>0.69</td><td>0.91</td><td>0.66</td></tr><tr><td>Lexicon</td><td>0.76</td><td>0.65</td><td>0.7 </td><td>0.59</td><td>0.79</td><td>0.65</td><td>0.76</td><td>0.62</td><td>0.79</td><td>0.64</td><td>0.76</td><td>0.63</td></tr><tr><td>Our ensemble</td><td>0.93</td><td>0.88</td><td>0.91</td><td>0.83</td><td>0.95</td><td>0.75</td><td>0.92</td><td>0.66</td><td>0.93</td><td>0.77</td><td>0.93</td><td>0.78</td></tr></tbody></table>
 
 Requirements
 ---
