@@ -5,6 +5,8 @@ This repository provides dataset and additional materials of the paper: "[Data-D
 
 The dataset was prepared for the five basic emotions (joy, sadness, anger, fear, and surprise) using a crowdsourcing platform and a home-grown procedure for collecting and controlling annotators markup.
 
+The data is in Russian.
+
 Version 0.1.1 (actual version)
 
 In this version of the dataset (the previous one is described in the article, branch ```v_0.0.1_(paper)```) an inaccuracy with the presence of similar sentences was corrected. The texts of sentences that completely (or almost completely) repeated each other were removed. In addition, some new examples were added, but the total number of examples was reduced from 9668 to 9410.
@@ -18,11 +20,39 @@ train_df = load_dataset('sagteam/cedr', name='enriched', split='train')
 test_df = load_dataset('sagteam/cedr', name='enriched', split='test')
 ```
 
+Here are 2 dataset configurations:
+- "main" - contains "text", "labels", and "source" features;
+- "enriched" - includes all "main" features and "sentences".
+
 Data
 ---
-The data is in Russian.
-
 Data was collected from several sources: posts of the Live Journal social network, texts of the online news agency Lenta.ru, and Twitter microblog posts.
+
+An example for an instance from the dataset is shown below:
+```
+{
+  'text': 'Забавно как люди в возрасте удивляются входящим звонкам на мобильник)',
+  'labels': [0],
+  'source': 'twitter',
+  'sentences': [
+    [
+      {'forma': 'Забавно', 'lemma': 'Забавно'},
+      {'forma': 'как', 'lemma': 'как'},
+      {'forma': 'люди', 'lemma': 'человек'},
+      {'forma': 'в', 'lemma': 'в'},
+      {'forma': 'возрасте', 'lemma': 'возраст'},
+      {'forma': 'удивляются', 'lemma': 'удивляться'},
+      {'forma': 'входящим', 'lemma': 'входить'},
+      {'forma': 'звонкам', 'lemma': 'звонок'},
+      {'forma': 'на', 'lemma': 'на'},
+      {'forma': 'мобильник', 'lemma': 'мобильник'},
+      {'forma': ')', 'lemma': ')'}
+    ]
+  ]
+}
+```
+
+Emotion label codes: {0: "joy", 1: "sadness", 2: "surprise", 3: "fear", 4: "anger"}
 
 In total, 3069 sentences were selected from LiveJournal posts, 2851 sentences from Lenta.Ru, and 3490 sentencesfrom Twitter. After selection, sentences were offered to annotators for labeling.
 
