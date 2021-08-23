@@ -7,9 +7,9 @@ The dataset was prepared for the five basic emotions (joy, sadness, anger, fear,
 
 Version 0.1.1 (actual version)
 
-Эта версия датасета отличается от предыдущего (который описан в статье, ветка v_0.0.1_(paper)) тем, что здесь была исправлена неточность с похожими предложениями. Были убраны тексты предложений, которые полностью (или почти полностью) повторяли друг друга. Кроме этого было доразмечено ещё немного новых примеров, однако общее число примеров сократилось с 9668 до 9410.
+In this version of the dataset (the previous one is described in the article, branch ```v_0.0.1_(paper)```) an inaccuracy with the presence of similar sentences was corrected. The texts of sentences that completely (or almost completely) repeated each other were removed. In addition, some new examples were added, but the total number of examples was reduced from 9668 to 9410.
 
-Данный набор данных был опубликован на [hugging face](https://huggingface.co/datasets/sagteam/cedr) и доступен для использования как:
+This dataset was published on [hugging face](https://huggingface.co/datasets/sagteam/cedr) and is available for use as:
 
 ```
 from datasets import load_dataset
