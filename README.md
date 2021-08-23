@@ -32,7 +32,7 @@ The dataset доступен загрузкой через Hugging Face.
 
 The number of labels by data source is presented in Table 1.
 
-#### Table #1. The number of emotion labels in different subsets of our dataset. В скобочках указана разница относительно версии корпуса из статьи (v_0.0.1_(paper)).
+#### Table #1. The number of emotion labels in different subsets of our dataset. The difference from the previous version of the dataset (v_0.0.1_(paper)) is shown in parentheses.
 
 | Data source |   Joy    | Sadness  |  Fear   | Anger   |Surprise |No emotions|Total sentences|
 | ----------- | -------- | -------- | ------- | ------- | ------- | --------- | ------------- |
