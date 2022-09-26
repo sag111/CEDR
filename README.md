@@ -16,8 +16,8 @@ This dataset was published on [hugging face](https://huggingface.co/datasets/sag
 ```
 from datasets import load_dataset
 
-train_df = load_dataset('sagteam/cedr', name='enriched', split='train')
-test_df = load_dataset('sagteam/cedr', name='enriched', split='test')
+train_df = load_dataset('cedr', name='enriched', split='train')
+test_df = load_dataset('cedr', name='enriched', split='test')
 ```
 
 Here are 2 dataset configurations:
