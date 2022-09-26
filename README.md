@@ -11,7 +11,7 @@ Version 0.1.1 (actual version)
 
 In this version of the dataset (the previous one is described in the article, branch `v_0.0.1_(paper)`) an inaccuracy with the presence of similar sentences was corrected. The texts of sentences that completely (or almost completely) repeated each other were removed. In addition, some new examples were added, but the total number of examples was reduced from 9668 to 9410.
 
-This dataset was published on [hugging face](https://huggingface.co/datasets/sagteam/cedr) and is available for use as:
+This dataset was published on [hugging face](https://huggingface.co/datasets/cedr) and is available for use as:
 
 ```
 from datasets import load_dataset
